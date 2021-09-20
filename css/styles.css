@@ -234,8 +234,11 @@ div.clear {
     overflow: auto;
 }
 
+img.pad_left {
+    padding-left:10px;
 }
 
+}
 
 .menu-holder {
 float: right;
