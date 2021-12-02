@@ -15,6 +15,9 @@ h3 {
     background-color: rgb(204, 0, 43);
     color: white}
 
+.white-text {
+    color: white}
+
 /* Container holding the image and the text */
 .imageContainer {
     position: relative;
