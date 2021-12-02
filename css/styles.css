@@ -1,217 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
 
-/**Organized by generic to specific**/
-#navbar {
-    overflow:hidden;
-    background-color:#ffdf1b;
-  }
-  
-  /* Navbar links */
-  #navbar a {
-    float: right;
-    display: block;
-    color:black;
+body {
+    font-family:  'Open Sans', sans-serif;
+    background-color: rgb(255, 255, 255)}
+
+h1 {
+    font-family:  'Noto Serif', serif;}
+
+h3 {
+    color: rgb(204, 0, 43);}
+
+.redBackground {
+    background-color: rgb(204, 0, 43);
+    color: white}
+
+/* Container holding the image and the text */
+.imageContainer {
+    position: relative;
     text-align: center;
-    padding: 0.5rem;
-    text-decoration: none;
+  }  
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel .carousel-indicators button {background-color: grey;}
+
+.tab-pane .nav-item {
+    width: 33%;
+    position: relative;
+}
+
+.status-efforts {
+    border:1px solid lightgray;
+}
+
+.tab-pane ul li {
+    float: center;
+}
+
+.carousel-item {
+    background-color: rgb(204, 0, 43);
+    padding: 15px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 14px;
+    height: 14px;
+    background-color: #000;
+    border: solid 1px #000;
+    border-radius: 50%
+}
+
+.footer_logo {
+    width: 24px; 
+    height: 24px;
+}
+
+input, textarea {
+    margin-bottom: 2%;
+}
+
+br.responsive {
+    display: inline;
+}
+
+.error {
+    width  : 100%;
+    color: white;
+    background-color: #900;
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}
+
+input.invalid{
+    border-color: #900;
+    background-color: #FDD;
+}
+
+@media only screen and (min-width: 992px) {
+/* Centered text */
+.centered {
+    position: absolute;
+    bottom: -20%;
+    right: 25%;
+    background-color: rgb(0, 35, 163);opacity:0.7;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-
-#page {
-    margin: 0% 5% auto 5%;
-    font-family: 'Roboto', sans-serif;
 }
 
-footer {
-    text-align:center;
-    clear:left;
-    display: block;
-}
-
-.big_title{
-    width:100%;
-    text-align:center;
-}
-
-.card {
-    display:block;
-    clear:left;
-    overflow: auto;
-    padding: 2%;
-    border:2px solid;
-    border-color:#0b0a0a;
-    margin: 3%;
-    background-color:white;
-}
-
-.title {
-    width:100%;
-    text-align:center;
-}
-
-.facts {
-    clear:left;
-}
-
-.small_card {
-    display:inline-block;
-}
-
-.big_title, .title {
-    font-family: 'Comic Neue', cursive;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.big_title, .title {
-    margin-top: -1%;
-    margin-bottom: -2%;
-}
-
-
-/**Small screens**/
-@media only screen and (max-width: 640px) {
-    #navbar a {
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    /* Centered text */
+    .centered {
+        position: relative;
+        right: -25%;
+        background-color: rgb(0, 35, 163);opacity:0.7;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    br.responsive {
         display: none;
+        }
     }
 
-    #navbar {
-        background-image: url("../images/hamburger.png");
-        background-color:#8dd8f8;
-        background-size:10%;           
-        background-repeat: no-repeat;
-        background-position: right top;
-        height:1.5em;
-        margin-bottom:-2em;
+@media only screen and (max-width: 768px) {
+    /* Centered text */
+    .centered {
+        background-color: rgb(0, 35, 163);opacity:0.7;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        }
+    br.responsive {
+        display: none;
+        }
     }
-
-    body {
-        background-color: #8dd8f8;
-        background-image: url("../images/dog.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: right bottom; 
-        background-size: 45%;
-    }
-    
-    .card .comic img{
-        display:none;
-    }
-
-    
-    #page {
-        margin: 0;
-    }
-
-    .card {
-        margin: 1%;
-        margin-bottom:3%;
-        padding-right: 5%;
-    }
-
-    .card .photo img {
-        max-width:100%;
-        width:100%;
-        border:0.3em solid;
-        border-color: #df3a3d;
-    }
-    footer {
-        padding-top:13%;
-    }
-    
-    footer div img{
-        display:inline-block;
-        width:10%;
-    }
-} 
-
-/**Medium screens**/
-@media only screen and (min-width: 641px) and (max-width: 1024px) {
-    body {
-        background-color: #8dd8f8;
-        background-image: url("../images/dog.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: right bottom; 
-        background-size: 30%;
-    }
-
-    
-    .card {
-        margin: 1%;
-        margin-bottom:3%;
-        padding-right: 5%;
-    }
-    
-    .card .comic img{
-        max-width:100%;
-        width:100%;
-        margin-top:3%;
-    }
-
-    
-    .card .photo img {
-        float: left;
-        max-width:100%;
-        width:50%;
-        margin-right: 3%;
-        border:0.3em solid;
-        border-color: #df3a3d;
-    }
-
-    footer {
-        padding-top:8%;
-    }
-    
-    footer div img{
-        display:inline-block;
-        width:5%;
-    }
-} 
-
-/**Large screens**/
-@media only screen and (min-width: 1025px) { 
-    body {
-        background-color: #8dd8f8;
-        background-image: url("../images/dog.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: right bottom; 
-        background-size: 15%;
-    }
-
-    .col1 {
-        float: left;
-        width: 50%;
-    }
-
-    .col2 {
-        float: left;
-        width: 50%;
-    }
-
-        
-    .card .comic img{
-        max-width:100%;
-        width:100%;
-        margin-top:3%;
-    }
-
-    .card .photo img {
-        float: left;
-        max-width:100%;
-        width:50%;
-        margin-right: 3%;
-        border:0.3em solid;
-        border-color: #df3a3d;
-    }
-
-    footer {
-        padding-top:3%;
-    }
-    
-    footer div img{
-        display:inline-block;
-        width:3%;
-    }
-} 
